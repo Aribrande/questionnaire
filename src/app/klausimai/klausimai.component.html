@@ -1,0 +1,17 @@
+<div class="col-md-12">
+    <div class="card mt-5">
+        <div class="card-header">Testas</div>
+        <div class="card-body">
+          <div>{{ klausimai[ak].klausimas }}
+              <div class="float-end">Liko 0 sec., Atsakyta: {{ teisingi}} / {{viso}}</div>
+             
+          </div> 
+          <hr> 
+          <div class="list-group" *ngIf="!pabaiga">
+            <button type="button" class="list-group-item list-group-item-action" *ngFor="let atsakymas of klausimai[ak].atsakymai; let i=index" (click)="speti(i)">
+                {{atsakymas}}
+            </button>
+         </div>
+        </div>
+    </div>
+</div>
